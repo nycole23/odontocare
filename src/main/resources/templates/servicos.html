@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Serviços | OdontoCare</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold text-primary fs-3"
+           th:href="@{/}">
+
+            <i class="bi bi-heart-pulse-fill"></i>
+            OdontoCare
+
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/}">
+                        Início
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/sobre}">
+                        Sobre
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active fw-semibold"
+                       th:href="@{/servicos}">
+                        Serviços
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="btn btn-outline-primary px-4"
+                       th:href="@{/login}">
+                        Entrar
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= BANNER ================= -->
+
+<section class="bg-primary text-white py-5">
+
+    <div class="container text-center py-5">
+
+        <span class="badge bg-light text-primary mb-3">
+            ODONTOCARE
+        </span>
+
+        <h1 class="display-4 fw-bold mb-3">
+            Nossos Serviços
+        </h1>
+
+        <p class="lead mx-auto col-lg-8">
+            Conheça nossos tratamentos odontológicos e descubra
+            como podemos ajudar você a cuidar da saúde e beleza
+            do seu sorriso.
+        </p>
+
+        <a th:href="@{/login}"
+           class="btn btn-light btn-lg text-primary fw-semibold mt-3">
+
+            Agendar atendimento
+            <i class="bi bi-calendar-check ms-2"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= APRESENTAÇÃO ================= -->
+
+<section class="py-5">
+
+    <div class="container text-center py-3">
+
+        <span class="text-primary fw-bold">
+            CUIDADO COMPLETO
+        </span>
+
+        <h2 class="display-6 fw-bold mt-2">
+            Tratamentos para cada sorriso
+        </h2>
+
+        <p class="text-secondary col-lg-8 mx-auto">
+            Oferecemos diferentes especialidades e tratamentos,
+            sempre buscando proporcionar um atendimento humanizado,
+            seguro e de qualidade.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LISTAGEM DE SERVIÇOS ================= -->
+
+<section class="bg-light py-5">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <!-- AVALIAÇÃO ODONTOLÓGICA -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100">
+
+                    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=700"
+                         class="card-img-top"
+                         alt="Avaliação odontológica">
+
+                    <div class="card-body p-4">
+
+                        <span class="badge bg-primary mb-3">
+                            Prevenção
+                        </span>
+
+                        <h5 class="card-title fw-bold">
+                            Avaliação Odontológica
+                        </h5>
+
+                        <p class="card-text text-secondary">
+                            Consulta para avaliar as condições da saúde
+                            bucal, identificar possíveis problemas e
+                            planejar os tratamentos necessários.
+                        </p>
+
+                        <a th:href="@{/login}"
+                           class="btn btn-outline-primary w-100">
+                            Agendar avaliação
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LIMPEZA DENTÁRIA -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100">
+
+                    <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=700"
+                         class="card-img-top"
+                         alt="Limpeza dentária">
+
+                    <div class="card-body p-4">
+
+                        <span class="badge bg-success mb-3">
+                            Prevenção
+                        </span>
+
+                        <h5 class="card-title fw-bold">
+                            Limpeza Dentária
+                        </h5>
+
+                        <p class="card-text text-secondary">
+                            Procedimento preventivo para remoção de
+                            placa bacteriana e tártaro, contribuindo
+                            para a manutenção da saúde bucal.
+                        </p>
+
+                        <a th:href="@{/login}"
+                           class="btn btn-outline-primary w-100">
+                            Agendar limpeza
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ORTODONTIA -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100">
+
+                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=700"
+                         class="card-img-top"
+                         alt="Tratamento ortodôntico">
+
+                    <div class="card-body p-4">
+
+                        <span class="badge bg-info text-dark mb-3">
+                            Especialidade
+                        </span>
+
+                        <h5 class="card-title fw-bold">
+                            Ortodontia
+                        </h5>
+
+                        <p class="card-text text-secondary">
+                            Tratamentos voltados ao alinhamento dos
+                            dentes e à correção de problemas de
+                            posicionamento dentário.
+                        </p>
+
+                        <a th:href="@{/login}"
+                           class="btn btn-outline-primary w-100">
+                            Agendar consulta
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CLAREAMENTO -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100">
+
+                    <img src="https://images.unsplash.com/photo-1606811971376-5e4e4e3b9e5a?w=700"
+                         class="card-img-top"
+                         alt="Clareamento dental">
+
+                    <div class="card-body p-4">
+
+                        <span class="badge bg-warning text-dark mb-3">
+                            Estética
+                        </span>
+
+                        <h5 class="card-title fw-bold">
+                            Clareamento Dental
+                        </h5>
+
+                        <p class="card-text text-secondary">
+                            Procedimento estético realizado com
+                            acompanhamento profissional para melhorar
+                            a aparência da coloração dos dentes.
+                        </p>
+
+                        <a th:href="@{/login}"
+                           class="btn btn-outline-primary w-100">
+                            Agendar consulta
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESTAURAÇÃO -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100">
+
+                    <img src="https://images.unsplash.com/photo-1606811971267-5d9a2e2e7a4c?w=700"
+                         class="card-img-top"
+                         alt="Restauração dentária">
+
+                    <div class="card-body p-4">
+
+                        <span class="badge bg-primary mb-3">
+                            Tratamento
+                        </span>
+
+                        <h5 class="card-title fw-bold">
+                            Restauração Dentária
+                        </h5>
+
+                        <p class="card-text text-secondary">
+                            Tratamento para recuperar a estrutura
+                            de dentes danificados, devolvendo
+                            sua funcionalidade e aparência.
+                        </p>
+
+                        <a th:href="@{/login}"
+                           class="btn btn-outline-primary w-100">
+                            Agendar consulta
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMPLANTES -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100">
+
+                    <img src="https://images.unsplash.com/photo-1622201441679-75c1c0d4a6f4?w=700"
+                         class="card-img-top"
+                         alt="Implantes dentários">
+
+                    <div class="card-body p-4">
+
+                        <span class="badge bg-info text-dark mb-3">
+                            Especialidade
+                        </span>
+
+                        <h5 class="card-title fw-bold">
+                            Implantes Dentários
+                        </h5>
+
+                        <p class="card-text text-secondary">
+                            Tratamento para substituição de dentes
+                            perdidos, auxiliando na recuperação da
+                            função mastigatória e estética.
+                        </p>
+
+                        <a th:href="@{/login}"
+                           class="btn btn-outline-primary w-100">
+                            Agendar avaliação
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COMO FUNCIONA ================= -->
+
+<section class="py-5">
+
+    <div class="container py-4">
+
+        <div class="text-center mb-5">
+
+            <span class="text-primary fw-bold">
+                SIMPLES E FÁCIL
+            </span>
+
+            <h2 class="display-6 fw-bold mt-2">
+                Como agendar seu atendimento?
+            </h2>
+
+            <p class="text-secondary">
+                Em poucos passos você pode solicitar seu atendimento.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 text-center">
+
+            <div class="col-md-4">
+
+                <div class="p-4 border rounded-4 h-100">
+
+                    <i class="bi bi-person-plus display-3 text-primary"></i>
+
+                    <h5 class="fw-bold mt-3">
+                        1. Faça seu cadastro
+                    </h5>
+
+                    <p class="text-secondary">
+                        Crie sua conta na plataforma OdontoCare
+                        para ter acesso ao sistema.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="p-4 border rounded-4 h-100">
+
+                    <i class="bi bi-calendar2-check display-3 text-primary"></i>
+
+                    <h5 class="fw-bold mt-3">
+                        2. Escolha seu serviço
+                    </h5>
+
+                    <p class="text-secondary">
+                        Selecione o tratamento, a data e o horário
+                        desejados para atendimento.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="p-4 border rounded-4 h-100">
+
+                    <i class="bi bi-check-circle display-3 text-primary"></i>
+
+                    <h5 class="fw-bold mt-3">
+                        3. Aguarde a confirmação
+                    </h5>
+
+                    <p class="text-secondary">
+                        Nossa equipe analisará sua solicitação
+                        e confirmará o agendamento.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+
+            <a th:href="@{/login}"
+               class="btn btn-primary btn-lg px-5">
+
+                Quero agendar
+                <i class="bi bi-arrow-right ms-2"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CHAMADA FINAL ================= -->
+
+<section class="bg-primary text-white py-5">
+
+    <div class="container text-center py-4">
+
+        <h2 class="display-6 fw-bold mb-3">
+            Seu sorriso merece atenção!
+        </h2>
+
+        <p class="lead mb-4">
+            Faça parte da OdontoCare e cuide da sua saúde bucal.
+        </p>
+
+        <a th:href="@{/login}"
+           class="btn btn-light btn-lg text-primary fw-bold px-5">
+
+            Acessar sistema
+            <i class="bi bi-box-arrow-in-right ms-2"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <h4 class="fw-bold">
+                    <i class="bi bi-heart-pulse-fill"></i>
+                    OdontoCare
+                </h4>
+
+                <p class="text-white-50 mt-3">
+                    Cuidando da saúde do seu sorriso com qualidade,
+                    carinho e compromisso.
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h5 class="fw-bold mb-3">
+                    Navegação
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a th:href="@{/}"
+                           class="text-white-50 text-decoration-none">
+                            Início
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a th:href="@{/sobre}"
+                           class="text-white-50 text-decoration-none">
+                            Sobre nós
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a th:href="@{/servicos}"
+                           class="text-white-50 text-decoration-none">
+                            Serviços
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a th:href="@{/login}"
+                           class="text-white-50 text-decoration-none">
+                            Entrar
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h5 class="fw-bold mb-3">
+                    Contato
+                </h5>
+
+                <p class="text-white-50">
+                    <i class="bi bi-telephone me-2"></i>
+                    (11) 99999-9999
+                </p>
+
+                <p class="text-white-50">
+                    <i class="bi bi-envelope me-2"></i>
+                    contato@odontocare.com.br
+                </p>
+
+                <p class="text-white-50">
+                    <i class="bi bi-geo-alt me-2"></i>
+                    São Paulo - SP
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <div class="text-center">
+
+            <p class="text-white-50 mb-0">
+                &copy; 2026 OdontoCare.
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
