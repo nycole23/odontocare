@@ -1,4 +1,4 @@
-package senai499.com.br.odontocare.model.enuns;
+package senai499.com.br.odontocare.model;
 
 public enum PerfilUsuario {
 

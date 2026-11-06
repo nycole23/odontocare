@@ -110,7 +110,23 @@
                     </div>
 
                     <form th:action="@{/login}" method="post">
+                        <!-- MENSAGEM DE ERRO -->
+                        <div class="alert alert-danger" th:if="${param.erro}">
+                            <i class="bi bi-exclamation-circle me-2"></i>
+                            E-mail ou senha inválidos. Tente novamente.
+                        </div>
 
+                        <!-- MENSAGEM DE LOGOUT -->
+                        <div class="alert alert-success" th:if="${param.logout}">
+                            <i class="bi bi-check-circle me-2"></i>
+                            Você saiu da sua conta com sucesso.
+                        </div>
+
+                        <!-- MENSAGEM DE CADASTRO -->
+                        <div class="alert alert-success" th:if="${param.cadastroSucesso}">
+                            <i class="bi bi-check-circle me-2"></i>
+                            Cadastro realizado com sucesso! Faça seu login.
+                        </div>
                         <!-- E-MAIL -->
                         <div class="mb-4">
 
@@ -182,7 +198,8 @@
 
                             <input class="form-check-input"
                                    type="checkbox"
-                                   id="lembrar">
+                                   id="lembrar"
+                                   name="remember-me">
 
                             <label class="form-check-label text-secondary"
                                    for="lembrar">
